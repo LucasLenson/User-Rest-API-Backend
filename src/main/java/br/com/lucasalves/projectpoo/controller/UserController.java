@@ -19,9 +19,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    //public UserController(UserService userService) {
-        //this.userService = userService;
-    //}
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping
     User create(@RequestBody User user) { 
