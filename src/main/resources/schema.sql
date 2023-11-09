@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS "user" (
-   ID bigint AUTO_INCREMENT primary key,
-   Nome varchar(255) not null,
-   Procedimento varchar(255) not null,
-   Dia datetime not null
+   id bigint AUTO_INCREMENT primary key,
+   user_name varchar(255) not null,
+   user_procedure varchar(255) not null,
+   user_day datetime not null
 );

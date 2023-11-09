@@ -15,9 +15,9 @@ public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
-    private String nome;
-    private String procedimento;
-    private Date dia;
+    private String name;
+    private String procedure;
+    private Date day;
     
     
     public Long getId() {
@@ -26,23 +26,23 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String nome) {
+        this.name = nome;
     }
-    public String getProcedimento() {
-        return procedimento;
+    public String getProcedure() {
+        return procedure;
     }
-    public void setProcedimento(String procedimento) {
-        this.procedimento = procedimento;
+    public void setProcedure(String procedure) {
+        this.procedure = procedure;
     }
-    public Date getDia() {
-        return dia;
+    public Date getDay() {
+        return day;
     }
-    public void setDia(Date dia) {
-        this.dia = dia;
+    public void setDay(Date day) {
+        this.day = day;
     }
  
 }
