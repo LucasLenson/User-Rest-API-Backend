@@ -7,6 +7,8 @@ import br.com.lucasalves.projectpoo.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("users")
@@ -22,6 +24,12 @@ public class UserController {
     @PostMapping
     User create(@RequestBody User user) { 
         return userService.create(user);
+    }
+
+    @GetMapping
+    public List<User> getAllUsers() {
+        List<User> user = UserService.getAllUsers();
+        return (List<User>) UserService.getAllUsers();
     }
 
     @GetMapping("/{id}")

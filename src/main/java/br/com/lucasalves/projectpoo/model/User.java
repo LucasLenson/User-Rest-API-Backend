@@ -2,7 +2,6 @@ package br.com.lucasalves.projectpoo.model;
 
 import jakarta.persistence.Id;
 
-import java.util.Date;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,9 +16,10 @@ public class User {
     private Long id;
     private String name;
     private String procedure;
-    private Date day;
-    
-    
+    private Float price;
+
+
+
     public Long getId() {
         return id;
     }
@@ -29,8 +29,8 @@ public class User {
     public String getName() {
         return name;
     }
-    public void setName(String nome) {
-        this.name = nome;
+    public void setName(String name) {
+        this.name = name;
     }
     public String getProcedure() {
         return procedure;
@@ -38,11 +38,11 @@ public class User {
     public void setProcedure(String procedure) {
         this.procedure = procedure;
     }
-    public Date getDay() {
-        return day;
+    public Float getPrice() {
+        return price;
     }
-    public void setDay(Date day) {
-        this.day = day;
+    public void setPrice(Float price) {
+        this.price = price;
     }
  
 }

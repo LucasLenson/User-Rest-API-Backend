@@ -5,13 +5,15 @@ import org.springframework.stereotype.Service;
 import br.com.lucasalves.projectpoo.model.User;
 import br.com.lucasalves.projectpoo.repository.UserRepository;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
-    private final UserRepository userRepository;
+    private static UserRepository userRepository;
 
     public UserService(UserRepository userRepository){
-        this.userRepository = userRepository;
+        UserService.userRepository = userRepository;
     }
 
     public User create(User user){
@@ -19,10 +21,13 @@ public class UserService {
 
     }
 
+    public static List<User> getAllUsers() {
+        return (List<User>) userRepository.findAll();
+    }
+
     public User getUserById(Long id) {
         return userRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
     }
-
 
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
@@ -32,7 +37,7 @@ public class UserService {
         User existentUser = getUserById(id);
 
         existentUser.setName(updateUser.getName());
-        existentUser.setDay(updateUser.getDay());
+        existentUser.setPrice(updateUser.getPrice());
         existentUser.setProcedure(updateUser.getProcedure());
 
         return userRepository.save(existentUser);
