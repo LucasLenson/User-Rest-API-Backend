@@ -21,12 +21,12 @@ public class UserService {
 
     }
 
-    public static List<User> getAllUsers() {
+    public List<User> getAllUsers() {
         return (List<User>) userRepository.findAll();
     }
 
     public User getUserById(Long id) {
-        return userRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
+        return userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found with id: " + id));
     }
 
     public void deleteUser(Long id) {
