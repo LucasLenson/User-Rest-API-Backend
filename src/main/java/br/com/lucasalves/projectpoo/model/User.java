@@ -15,8 +15,8 @@ public class User {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     private String name;
-    private String procedure;
-    private Float price;
+    private String products;
+    private Float prices;
 
 
 
@@ -32,17 +32,17 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
-    public String getProcedure() {
-        return procedure;
+    public String getProducts() {
+        return products;
     }
-    public void setProcedure(String procedure) {
-        this.procedure = procedure;
+    public void setProducts(String procedure) {
+        this.products = procedure;
     }
-    public Float getPrice() {
-        return price;
+    public Float getPrices() {
+        return prices;
     }
-    public void setPrice(Float price) {
-        this.price = price;
+    public void setPrices(Float price) {
+        this.prices = price;
     }
  
 }

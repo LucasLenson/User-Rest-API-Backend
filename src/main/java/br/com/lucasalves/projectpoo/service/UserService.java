@@ -37,8 +37,8 @@ public class UserService {
         User existentUser = getUserById(id);
 
         existentUser.setName(updateUser.getName());
-        existentUser.setPrice(updateUser.getPrice());
-        existentUser.setProcedure(updateUser.getProcedure());
+        existentUser.setPrices(updateUser.getPrices());
+        existentUser.setProducts(updateUser.getProducts());
 
         return userRepository.save(existentUser);
 
